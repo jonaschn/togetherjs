@@ -59,10 +59,10 @@ This will install a bunch of stuff, most of which is only used for development. 
 Now you can build TogetherJS, like:
 
 ```sh
-$ grunt build buildsite --no-hardlink
+$ grunt build --no-hardlink
 ```
 
-This will create a copy of the entire `togetherjs.com` site in `build/`.  You'll need to setup a local web server of your own pointed to the `build/` directory. To start a server on port 8080, run:
+This will create all required files in the `build/` directory.  You'll need to setup a local web server of your own pointed to the `build/` directory. To start a server on port 8080, run:
 
 ```sh
 $ node devserver.js
