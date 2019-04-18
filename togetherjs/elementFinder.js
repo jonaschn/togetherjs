@@ -51,11 +51,12 @@ define(["util", "jquery"], function (util, $) {
     var _len = children.length;
     var index = 0;
     for (var i=0; i<_len; i++) {
-      if (children[i] == el) {
+      var child = children[i];
+      if (child == el) {
         break;
       }
-      if (children[i].nodeType == document.ELEMENT_NODE) {
-        if (children[i].className.indexOf("togetherjs") != -1) {
+      if (child.nodeType == document.ELEMENT_NODE) {
+        if ((child.className.baseVal !== undefined ? child.className.baseVal : child.className).indexOf("togetherjs") != -1) {
           // Don't count our UI
           continue;
         }
@@ -160,7 +161,7 @@ define(["util", "jquery"], function (util, $) {
       for (var i=0; i<children.length; i++) {
         var child = children[i];
         if (child.nodeType == document.ELEMENT_NODE) {
-          if (child.className.indexOf("togetherjs") != -1) {
+        if ((child.className.baseVal !== undefined ? child.className.baseVal : child.className).indexOf("togetherjs") != -1) {
             continue;
           }
           count--;
