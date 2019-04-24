@@ -75,14 +75,14 @@
   <!-- The window for sharing the link: -->
   <div id="togetherjs-share" class="togetherjs-window"
        data-bind-to="#togetherjs-share-button" style="display: none">
-    <header> {{ gettext('Invite a friend') }} </header>
+    <header> {{ gettext('Invite a colleague') }} </header>
     <section>
       <div class="togetherjs-not-mobile">
-        <p>{{ gettext('Copy and paste this link over IM or email:') }}</p>
+        <p>{{ gettext('Copy and paste this link over email:') }}</p>
         <input type="text" class="togetherjs-share-link">
       </div>
       <div class="togetherjs-only-mobile">
-        <p>{{ gettext('Copy and paste this link over IM or email:') }}</p>
+        <p>{{ gettext('Copy and paste this link over email:') }}</p>
         <input type="text" class="togetherjs-share-link">
         <!-- <a class="togetherjs-share-link" href="#">Press your thumb here.</a> -->
       </div>
@@ -323,12 +323,10 @@
       <input class="togetherjs-self-name" type="text" data-toggles="#togetherjs-self-name-display" style="display: none" placeholder="{{ gettext("Enter your name") }}">
     </div>
     <div class="togetherjs-menu-hr-avatar"></div>
-    <div class="togetherjs-menu-item" id="togetherjs-menu-update-name"><img src="http://localhost:8080/togetherjs/images/button-pencil.png" alt=""> {{ gettext('Update your name') }}</div>
-    <div class="togetherjs-menu-item" id="togetherjs-menu-update-avatar"><img src="http://localhost:8080/togetherjs/images/btn-menu-change-avatar.png" alt=""> {{ gettext('Change avatar') }}</div>
+{#    <div class="togetherjs-menu-item" id="togetherjs-menu-update-name"><img src="http://localhost:8080/togetherjs/images/button-pencil.png" alt=""> {{ gettext('Update your name') }}</div>#}
+{#    <div class="togetherjs-menu-item" id="togetherjs-menu-update-avatar"><img src="http://localhost:8080/togetherjs/images/btn-menu-change-avatar.png" alt=""> {{ gettext('Change avatar') }}</div>#}
     <div class="togetherjs-menu-item" id="togetherjs-menu-update-color"><span class="togetherjs-person-bgcolor-self"></span> {{ gettext('Pick profile color') }}</div>
-    <div class="togetherjs-hr"></div>
-    <div class="togetherjs-menu-item" id="togetherjs-menu-help">{{ gettext('Help') }}</div>
-    <div class="togetherjs-menu-item" id="togetherjs-menu-feedback">{{ gettext('Feedback') }}</div>
+    <div class="togetherjs-menu-item" id="togetherjs-menu-help"><img src="http://localhost:8080/togetherjs/images/btn-menu-change-avatar.png" alt="help">{{ gettext('Help') }}</div>
     <div id="togetherjs-invite" style="display: none">
       <div class="togetherjs-hr"></div>
       <div id="togetherjs-invite-users"></div>
@@ -356,12 +354,10 @@
       <span class="togetherjs-person-name-self" id="togetherjs-self-name-display"></span>
     </div>
     <div class="togetherjs-menu-hr-avatar"></div>
-    <div class="togetherjs-menu-item" id="togetherjs-menu-update-name-button"><img src="http://localhost:8080/togetherjs/images/button-pencil.png" alt=""> {{ gettext('Update your name') }}</div>
-    <div class="togetherjs-menu-item" id="togetherjs-menu-update-avatar-button"><img src="http://localhost:8080/togetherjs/images/btn-menu-change-avatar.png" alt=""> {{ gettext('Change avatar') }}</div>
+{#    <div class="togetherjs-menu-item" id="togetherjs-menu-update-name-button"><img src="http://localhost:8080/togetherjs/images/button-pencil.png" alt=""> {{ gettext('Update your name') }}</div>#}
+{#    <div class="togetherjs-menu-item" id="togetherjs-menu-update-avatar-button"><img src="http://localhost:8080/togetherjs/images/btn-menu-change-avatar.png" alt=""> {{ gettext('Change avatar') }}</div>#}
     <div class="togetherjs-menu-item" id="togetherjs-menu-update-color-button"><span class="togetherjs-person-bgcolor-self"></span> {{ gettext('Pick profile color') }}</div>
-    <div class="togetherjs-hr"></div>
     <div class="togetherjs-menu-item" id="togetherjs-menu-help-button">{{ gettext('Help') }}</div>
-    <div class="togetherjs-menu-item" id="togetherjs-menu-feedback-button">{{ gettext('Feedback') }}</div>
     <div class="togetherjs-hr"></div>
     <div class="togetherjs-menu-item" id="togetherjs-menu-end-button"><img src="http://localhost:8080/togetherjs/images/button-end-session.png" alt=""> {{ gettext('End TOOL_NAME') }}</div>
     </section>
@@ -460,16 +456,10 @@
       </p>
     </section>
     <section class="togetherjs-buttons">
-      <button class="togetherjs-cancel togetherjs-dismiss">{{ gettext('Cancel') }}</button>
+      <button class="togetherjs-primary togetherjs-dismiss">{{ gettext('Cancel') }}</button>
       <span class="togetherjs-alt-text">{{ gettext('or') }}</span>
       <button id="togetherjs-end-session" class="togetherjs-destructive">{{ gettext('End session') }}</button>
     </section>
-  </div>
-
-  <div id="togetherjs-feedback-form" class="togetherjs-modal" style="display: none;">
-    <header> {{ gettext('Feedback') }} </header>
-    <iframe src="https://docs.google.com/a/mozilla.com/forms/d/1lVE7JyRo_tjakN0mLG1Cd9X9vseBX9wci153z9JcNEs/viewform?embedded=true" width="400" height="300" frameborder="0" marginheight="0" marginwidth="0">{{ gettext('Loading form...') }}</iframe>
-    <!-- <p><button class="togetherjs-modal-close">Close</button></p> -->
   </div>
 
   <div style="display: none">
